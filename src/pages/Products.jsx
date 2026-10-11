@@ -1,6 +1,6 @@
 import React from "react";
 import ProductCard from "../components/ProductCard";
-import products from "../data/products";
+import products from "../data/Products.js";
 import "./product.css";
 
 function Products() {
