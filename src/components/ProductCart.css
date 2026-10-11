@@ -1,0 +1,354 @@
+/* ==========================================================================
+   Product Cards - Premium Handloom Luxury Theme
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Main Product Container
+   ========================================================================== */
+.main-container {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1.5rem;
+
+  padding: 2rem;
+
+  background-color: #F3EFEA;
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Product Card
+   ========================================================================== */
+.product-card {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #FAF8F5;
+
+  border: 1px solid #EAE5DD;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+
+  box-sizing: border-box;
+}
+/* Hover effect */
+
+.product-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 24px rgba(44, 42, 41, 0.08);
+
+  border-color: #D6CFC7;
+}
+
+
+/* ==========================================================================
+   Product Image
+   ========================================================================== */
+
+.product-image-container {
+  width: 100%;
+
+  height: 250px;
+
+  background-color: #F3EFEA;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+
+.product-image {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+
+/* Image zoom */
+
+.product-card:hover .product-image {
+  transform: scale(1.04);
+}
+
+
+/* ==========================================================================
+   Product Details
+   ========================================================================== */
+
+.product-details {
+  padding: 1.2rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 210px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   Category
+   ========================================================================== */
+
+.product-category {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  font-size: 0.75rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+  color: #A0835B;
+
+  margin-bottom: 0.35rem;
+
+  font-weight: 600;
+}
+
+
+/* ==========================================================================
+   Product Name
+   ========================================================================== */
+
+.product-name {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+
+  font-size: 1.25rem;
+
+  font-weight: 500;
+
+  color: #2C2A29;
+
+  line-height: 1.3;
+
+  margin-bottom: 0.5rem;
+}
+
+
+/* ==========================================================================
+   Rating
+   ========================================================================== */
+
+.rating {
+  font-size: 0.85rem;
+
+  color: #55524F;
+
+  margin-bottom: 0.75rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+
+/* ==========================================================================
+   Price
+   ========================================================================== */
+
+.price-section {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 0.75rem;
+
+  margin-bottom: 0.75rem;
+}
+
+
+.product-price {
+  font-family:
+    'Playfair Display',
+    Georgia,
+    serif;
+
+  font-size: 1.2rem;
+
+  font-weight: 600;
+
+  color: #2C2A29;
+}
+
+
+.discount {
+  font-family:
+    'Inter',
+    sans-serif;
+
+  font-size: 0.75rem;
+
+  font-weight: 500;
+
+  color: #276749;
+
+  background-color: #E6FFFA;
+
+  padding: 2px 6px;
+
+  border-radius: 4px;
+}
+
+
+/* ==========================================================================
+   Stock
+   ========================================================================== */
+
+.stock {
+  font-family:
+    'Inter',
+    sans-serif;
+
+  font-size: 0.8rem;
+
+  color: #716D6A;
+
+  margin-bottom: 1rem;
+}
+
+
+/* ==========================================================================
+   Add To Cart Button
+   ========================================================================== */
+
+.add-cart-btn {
+  font-family:
+    'Inter',
+    sans-serif;
+
+  background-color: #2C2A29;
+
+  color: #FAF8F5;
+
+  border: none;
+
+  padding: 0.65rem 1.25rem;
+
+  font-size: 0.85rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+
+  text-align: center;
+
+  width: 100%;
+
+  margin-top: auto;
+}
+
+
+.add-cart-btn:hover:not(:disabled) {
+  background-color: #A0835B;
+
+  color: #FFFFFF;
+}
+
+
+.add-cart-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+
+.add-cart-btn:disabled {
+  background-color: #E2DDD6;
+
+  color: #A39E98;
+
+  cursor: not-allowed;
+}
+
+
+/* ==========================================================================
+   Tablet
+   ========================================================================== */
+
+@media (max-width: 1000px) {
+
+  .main-container {
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 1.5rem;
+  }
+
+}
+
+
+/* ==========================================================================
+   Small Tablet
+   ========================================================================== */
+
+@media (max-width: 750px) {
+
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1rem;
+
+    padding: 1rem;
+  }
+
+}
+
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+
+@media (max-width: 576px) {
+
+  .main-container {
+    grid-template-columns: 1fr;
+
+    padding: 1rem;
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+
+  .product-image-container {
+    height: 230px;
+  }
+
+}

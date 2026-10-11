@@ -1,0 +1,155 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: clamp(420px, 48vw, 620px);
+  padding: clamp(24px, 6vw, 90px);
+  overflow: hidden;
+  background: #f3efe8;
+  color: #fffaf2;
+}
+
+/* Saree image */
+.hero-img {
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: -1;
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+/* Dark overlay for readable text */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 29, 21, 0.92) 0%,
+    rgba(35, 29, 21, 0.72) 38%,
+    rgba(35, 29, 21, 0.08) 100%
+  );
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 580px;
+}
+
+.hero-label {
+  display: block;
+  font-size: clamp(10px, 1vw, 13px);
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 4.5vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+.hero p {
+  max-width: 420px;
+  font-size: clamp(14px, 1.3vw, 17px);
+  line-height: 1.7;
+  margin: 0 0 26px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 46px;
+  padding: 12px 24px;
+  background: #283722;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .hero {
+    min-height: 460px;
+    padding: 40px;
+  }
+
+  .hero-img {
+    width: 72%;
+    object-position: 55% center;
+  }
+
+  .hero-content {
+    max-width: 480px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero {
+    min-height: 520px;
+    padding: 32px 22px;
+    align-items: center;
+  }
+
+  .hero-img {
+    width: 100%;
+    object-position: 60% center;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      90deg,
+      rgba(35, 29, 21, 0.88),
+      rgba(35, 29, 21, 0.48)
+    );
+  }
+
+  .hero-content {
+    max-width: 440px;
+  }
+
+  .hero-label {
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 8vw, 44px);
+  }
+
+  .hero p {
+    max-width: 340px;
+    line-height: 1.6;
+  }
+
+  .hero-btn {
+    min-height: 48px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 360px) {
+  .hero {
+    min-height: 460px;
+    padding: 24px 16px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+}

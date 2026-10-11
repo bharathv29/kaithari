@@ -1,0 +1,287 @@
+/* =====================================================
+   KAITHARILOOM — PREMIUM LUXURY NAVBAR
+   Responsive | All Pages | All Devices
+   ===================================================== */
+
+
+/* 1. MAIN NAVBAR */
+
+.navbar {
+  width: 100%;
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.85rem 5.5%;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    110deg,
+    #30251D 0%,
+    #45372A 55%,
+    #30251D 100%
+  );
+
+  border-bottom: 1px solid rgba(192, 157, 99, 0.55);
+
+  box-shadow:
+    0 4px 18px rgba(31, 23, 17, 0.15);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* 2. BRAND NAME */
+
+.navbar h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+
+  color: #F8F0E3;
+
+  white-space: nowrap;
+
+  transition: color 0.3s ease;
+}
+
+.navbar h2:hover {
+  color: #D6B779;
+}
+
+
+/* 3. NAVIGATION LINKS */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(1.2rem, 2.5vw, 2.5rem);
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+
+/* 4. INDIVIDUAL LINKS */
+
+.nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: inline-block;
+
+  position: relative;
+
+  padding: 0.5rem 0;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  letter-spacing: 0.3px;
+
+  color: #F3EADF;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* 5. GOLD UNDERLINE EFFECT */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #D6B779;
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #DCC18D;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* 6. HAMBURGER BUTTON */
+
+.hamburger {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  color: #F8F0E3;
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(214, 183, 121, 0.5);
+  border-radius: 6px;
+
+  font-size: 1.5rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.hamburger:hover {
+  background: #D6B779;
+  color: #30251D;
+}
+
+
+/* 7. TABLET AND MOBILE */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    min-height: 68px;
+
+    padding: 0.8rem 5%;
+
+    gap: 1rem;
+  }
+
+  .navbar h2 {
+    font-size: clamp(1.3rem, 4vw, 1.7rem);
+  }
+
+  .hamburger {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  /* MOBILE DROPDOWN MENU */
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 0.5rem 5% 1rem;
+    margin: 0;
+
+    background: linear-gradient(
+      135deg,
+      #30251D,
+      #45372A
+    );
+
+    border-top: 1px solid rgba(214, 183, 121, 0.25);
+    border-bottom: 1px solid #B89A68;
+
+    box-shadow:
+      0 12px 22px rgba(31, 23, 17, 0.2);
+  }
+
+  /* OPEN MENU */
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+
+    padding: 1rem 0.4rem;
+
+    font-size: 1rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .nav-links a::after {
+    bottom: 0.45rem;
+  }
+}
+
+
+/* 8. EXTRA SMALL MOBILE */
+
+@media (max-width: 360px) {
+
+  .navbar {
+    padding: 0.7rem 4%;
+    gap: 0.5rem;
+  }
+
+  .navbar h2 {
+    font-size: 1.25rem;
+    letter-spacing: -0.7px;
+  }
+
+  .hamburger {
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+  }
+
+}
+
+
+/* 9. REDUCE ANIMATIONS WHEN PREFERRED */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navbar h2,
+  .nav-links a,
+  .nav-links a::after,
+  .hamburger {
+    transition: none;
+  }
+
+}
