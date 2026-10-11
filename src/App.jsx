@@ -8,7 +8,7 @@ import Products from "./pages/Products";
 import Checkout from "./pages/Checkout";
 import OrderDetails from "./pages/OrderDetails";
 import NotFound from "./pages/NotFound";
-import About from "./pages/About";
+import About from "./pages/AboutPage";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
