@@ -8,7 +8,7 @@ import Products from "./pages/Products";
 import Checkout from "./pages/Checkout";
 import OrderDetails from "./pages/OrderDetails";
 import NotFound from "./pages/NotFound";
-import About from "./pages/AboutPage";
+import AboutPage from "./pages/AboutPage";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
@@ -26,7 +26,7 @@ function App(){
      <Route path="/checkout" element={<Checkout/>}/>
 <Route path="/orderdetails" element={<OrderDetails/>}/>
       <Route path="*" element={<NotFound/>}/>
-      <Route path="/about" element={<About/>}/>
+      <Route path="/about" element={<AboutPage/>}/>
       <Route path="/contact" element={<Contact/>}/>
   </Routes>
     <Footer/>
