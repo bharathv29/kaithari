@@ -1,6 +1,6 @@
 import './componentstyle/hero.css';
 import heroSaree from '../assets/hero-saree.png';
-
+import { Routes, Route } from "react-router-dom";
 function Hero() {
   return (
     <section className="hero">
