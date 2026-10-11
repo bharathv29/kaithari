@@ -1,6 +1,7 @@
 import './componentstyle/hero.css';
 import heroSaree from '../assets/hero-saree.png';
-import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom"; // Change this from Routes/Route
+
 function Hero() {
   return (
     <section className="hero">
@@ -21,9 +22,10 @@ function Hero() {
           tradition, care and unmatched quality.
         </p>
 
-        <a href="/products" className="hero-btn">
+        {/* Change <a href="..."> to <Link to="..."> */}
+        <Link to="/products" className="hero-btn">
           Shop Now <span>→</span>
-        </a>
+        </Link>
       </div>
 
       <img
